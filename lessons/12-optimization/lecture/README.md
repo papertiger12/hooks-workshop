@@ -1,5 +1,16 @@
-- useMemo on calculateWeeks
-- memo
+const el = Calendar();
+commit(el) // build dom and send to browser to render
+// state change
+const newEl = Calendar();
+const diff = compare(el, newEl); // usually fast enough, can be expensive
+commit(diff) // fast, b/c of diff
+
+- just because react calls component, doesn't equate a performance issue
+
+in Dashboard.js
+
+- useMemo on calculateWeeks / dont calculate unless we must
+- memo / diff props, before diff new and old el
 - useCallback
 
 - useMemo on calculateWeeks.js
@@ -14,4 +25,3 @@
   - make it huge (don't forget the CSS for the height)
   - start memoing everything
   - useCallback (just a useMemo shortcut for functions)
-

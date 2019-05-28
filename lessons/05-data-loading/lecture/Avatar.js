@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
 import {
   calculateTotalMinutes,
   calculateExpectedMinutes,
   fetchUser,
   subscribeToPosts
-} from 'app/utils'
-import ProgressCircle from 'app/ProgressCircle'
+} from "app/utils"
+import ProgressCircle from "app/ProgressCircle"
 
 /******************************************************************************/
 // Alright, we know everything we need to know about React to start building
@@ -26,7 +26,7 @@ export default function Avatar({ uid, size = 50, bg, className, ...rest }) {
   if (!user) {
     return (
       <div
-        className={'Avatar empty ' + className}
+        className={"Avatar empty " + className}
         style={{ width: size, height: size }}
         {...rest}
       />
@@ -56,7 +56,7 @@ export default function Avatar({ uid, size = 50, bg, className, ...rest }) {
 
   return (
     <div
-      className={'Avatar ' + className}
+      className={"Avatar " + className}
       style={{ width: size, height: size }}
       {...rest}
     >
